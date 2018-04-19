@@ -5,9 +5,15 @@
     xmlns:local="using:DataCollector"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" FontFamily="Segoe UI">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <RadioButton x:Name="imperialRadioButton" Content="Imperial" HorizontalAlignment="Left" Margin="60,199,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="metricRadioButton" Content="Metric" HorizontalAlignment="Left" Margin="187,200,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="183,45,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Margin="268,45,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="inputTextBox" HorizontalAlignment="Left" Margin="17,16,0,0" Text="Enter values" VerticalAlignment="Top" Height="140" Width="139"/>
+        <TextBox x:Name="outputTextBox" HorizontalAlignment="Left" Margin="59,279,0,0" Text="Output" VerticalAlignment="Top"/>
+        <ListBox HorizontalAlignment="Left" Height="246" Margin="55,312,0,0" VerticalAlignment="Top" Width="256" RequestedTheme="Default"/>
     </Grid>
 </Page>

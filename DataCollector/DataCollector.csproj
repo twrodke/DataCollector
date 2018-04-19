@@ -95,10 +95,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Device.cs" />
+    <Compile Include="IMeasuringDevice.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MeasureLengthDevice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitsEnumeration.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
