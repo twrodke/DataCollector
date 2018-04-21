@@ -8,10 +8,10 @@
     mc:Ignorable="d" FontFamily="Segoe UI">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <RadioButton x:Name="imperialRadioButton" Content="Imperial" HorizontalAlignment="Left" Margin="13,673,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="metricRadioButton" Content="Metric" HorizontalAlignment="Left" Margin="299,675,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="139,706,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Margin="224,706,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="imperialRadioButton" Content="Imperial" HorizontalAlignment="Left" Margin="10,675,0,0" VerticalAlignment="Top" Checked="imperialRadioButton_Checked"/>
+        <RadioButton x:Name="metricRadioButton" Content="Metric" HorizontalAlignment="Left" Margin="10,722,0,0" VerticalAlignment="Top" Checked="metricRadioButton_Checked"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="253,675,0,0" VerticalAlignment="Top" Click="startButton_Click" Width="140"/>
+        <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Margin="253,722,0,0" VerticalAlignment="Top" Click="stopButton_Click" Width="140"/>
         <TextBox x:Name="outputTextBox" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Output" VerticalAlignment="Top" Width="410"/>
         <ListBox HorizontalAlignment="Left" Height="626" Margin="8,46,0,0" VerticalAlignment="Top" Width="412" RequestedTheme="Default"/>
     </Grid>

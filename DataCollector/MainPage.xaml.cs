@@ -26,5 +26,25 @@ namespace DataCollector
         {
             this.InitializeComponent();
         }
+
+        private void startButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void stopButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void imperialRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void metricRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
