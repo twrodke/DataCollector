@@ -8,7 +8,9 @@ namespace DataCollector
 {
     public enum Units
     {
+        //Return units measured in centimeters
         Metric,
+        //Return units measured in inches
         Imperial
     }
 }

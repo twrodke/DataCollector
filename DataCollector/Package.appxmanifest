@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="4421cb0a-6c67-40f8-a320-a357e9c9eb4b"
-    Publisher="CN=ekara"
+    Name="0607775a-a85c-4b33-a42d-ad65ec63821a"
+    Publisher="CN=eneskaragic"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="4421cb0a-6c67-40f8-a320-a357e9c9eb4b" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="0607775a-a85c-4b33-a42d-ad65ec63821a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>DataCollector</DisplayName>
-    <PublisherDisplayName>ekara</PublisherDisplayName>
+    <PublisherDisplayName>eneskaragic</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

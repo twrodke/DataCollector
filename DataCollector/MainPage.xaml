@@ -5,7 +5,8 @@
     xmlns:local="using:DataCollector"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" FontFamily="Segoe UI">
+    mc:Ignorable="d">
+
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <RadioButton x:Name="imperialRadioButton" Content="Imperial" HorizontalAlignment="Left" Margin="10,675,0,0" VerticalAlignment="Top" Checked="imperialRadioButton_Checked"/>
@@ -13,6 +14,7 @@
         <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="253,675,0,0" VerticalAlignment="Top" Click="startButton_Click" Width="140"/>
         <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Margin="253,722,0,0" VerticalAlignment="Top" Click="stopButton_Click" Width="140"/>
         <TextBox x:Name="outputTextBox" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Output" VerticalAlignment="Top" Width="410"/>
-        <ListBox HorizontalAlignment="Left" Height="626" Margin="8,46,0,0" VerticalAlignment="Top" Width="412" RequestedTheme="Default"/>
+        <ListBox x:Name="outputListBox" HorizontalAlignment="Left" Height="496" Margin="8,176,0,0" VerticalAlignment="Top" Width="412" RequestedTheme="Default"/>
+        <TextBox x:Name="myTestTextBox" HorizontalAlignment="Left" Margin="130,91,0,0" Text="Test" VerticalAlignment="Top"/>
     </Grid>
 </Page>

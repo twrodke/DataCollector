@@ -11,7 +11,6 @@ namespace DataCollector
         /// <summary>
         /// Public method declarations
         /// </summary>
-        ///
 
         //This method will return a decimal that represents the metric value of the most recent measurement that was captured.
         decimal MetricValue();

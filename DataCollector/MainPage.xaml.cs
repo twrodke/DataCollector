@@ -22,6 +22,12 @@ namespace DataCollector
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        string unitType = "";
+        int[] dataToProcess = new int[] { 1, 2, 3 };
+        //MeasureLengthDevice measureLengthDevice = new MeasureLengthDevice(string _unitsToUse, int[] _dataCaptured, int _mostRecentMeasure);
+        MeasureLengthDevice measureLengthDevice = new MeasureLengthDevice("");
+
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -29,22 +35,47 @@ namespace DataCollector
 
         private void startButton_Click(object sender, RoutedEventArgs e)
         {
+            IMeasuringDevice measuringDevice = measureLengthDevice;
+            measuringDevice.StartCollecting();
+            
 
+
+
+
+
+            int value = 0;
+            Device device = new Device();
+            value = device.GetMeasurement();
+
+            outputTextBox.Text = value.ToString();
         }
 
         private void stopButton_Click(object sender, RoutedEventArgs e)
         {
+            IMeasuringDevice measuringDevice = measureLengthDevice;
+            measuringDevice.StopCollecting();
 
         }
 
         private void imperialRadioButton_Checked(object sender, RoutedEventArgs e)
         {
-
+            IMeasuringDevice measuringDevice = measureLengthDevice;
+            if (imperialRadioButton.IsChecked == true)
+            {
+                unitType =  Units.Imperial.ToString();
+                myTestTextBox.Text = unitType;
+                myTestTextBox.Text = (19 * 2.54M).ToString();
+            }
         }
 
         private void metricRadioButton_Checked(object sender, RoutedEventArgs e)
         {
-
+            if (metricRadioButton.IsChecked == true)
+            {
+                unitType = Units.Metric.ToString();
+                myTestTextBox.Text = unitType;
+                myTestTextBox.Text = (19 * 1).ToString();
+            }
         }
     }
 }
