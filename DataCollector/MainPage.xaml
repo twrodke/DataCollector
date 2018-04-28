@@ -5,16 +5,18 @@
     xmlns:local="using:DataCollector"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:DataCollector"
     mc:Ignorable="d">
 
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <RadioButton x:Name="imperialRadioButton" Content="Imperial" HorizontalAlignment="Left" Margin="10,675,0,0" VerticalAlignment="Top" Checked="imperialRadioButton_Checked"/>
-        <RadioButton x:Name="metricRadioButton" Content="Metric" HorizontalAlignment="Left" Margin="10,722,0,0" VerticalAlignment="Top" Checked="metricRadioButton_Checked"/>
-        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="253,675,0,0" VerticalAlignment="Top" Click="startButton_Click" Width="140"/>
-        <Button x:Name="stopButton" Content="Stop" HorizontalAlignment="Left" Margin="253,722,0,0" VerticalAlignment="Top" Click="stopButton_Click" Width="140"/>
-        <TextBox x:Name="outputTextBox" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Output" VerticalAlignment="Top" Width="410"/>
-        <ListBox x:Name="outputListBox" HorizontalAlignment="Left" Height="496" Margin="8,176,0,0" VerticalAlignment="Top" Width="412" RequestedTheme="Default"/>
-        <TextBox x:Name="myTestTextBox" HorizontalAlignment="Left" Margin="130,91,0,0" Text="Test" VerticalAlignment="Top"/>
+        <TextBlock x:Name="recentMeasurementTextBox" HorizontalAlignment="Left" Margin="521,18,0,0" Text="{Binding Measurement}" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="rawDataLabel" HorizontalAlignment="Left" Margin="326,140,0,0" Text="Raw Data" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="rawDataTextBox" HorizontalAlignment="Left" Margin="524,140,0,0" Text="..." TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="startButton1" Content="Start" HorizontalAlignment="Left" Margin="30,26,0,0" VerticalAlignment="Top" Click="startButton1_Click"/>
+        <Button x:Name="stopButton1" Content="Stop" HorizontalAlignment="Left" Margin="29,63,0,0" VerticalAlignment="Top" Click="stopButton1_Click"/>
+        <RadioButton x:Name="imperialRadioButton1" Content="Imperial" HorizontalAlignment="Left" Margin="31,159,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="metricRadioButton1" Content="Metric" HorizontalAlignment="Left" Margin="32,195,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="lastValueLabel" HorizontalAlignment="Left" Margin="326,22,0,0" Text="Most Recent Measure" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>
 </Page>

@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Device.cs" />
     <Compile Include="IMeasuringDevice.cs" />
+    <Compile Include="DisplayMeasurements.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

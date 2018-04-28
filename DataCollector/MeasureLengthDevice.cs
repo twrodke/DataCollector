@@ -1,40 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Core;
+using Windows.UI.Core;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace DataCollector
 {
     class MeasureLengthDevice : IMeasuringDevice
     {
-        //This field will determine whether the generated measurements are interpreted in 
-        //metric(e.g.centimeters) or imperial(e.g.inches) units.Its value will be determined 
-        //from user input.
-        private string unitsToUse;
-
-        //This field will store a history of a limited set of recently captured measurements. 
-        //Once the array is full, the class should start overwriting the oldest elements while 
-        //continuing to record the newest captures. (You may need some helper fields/variables 
-        //to go with this one).
-        private int[] dataCaptured;
-
-        //This field will store the most recent measurement captured for convenience of display.
-        private int mostRecentMeasure;
-
         const decimal centimeter = 2.54M;
-        const decimal inches = 1;    
+        const decimal inches = 1;
 
-        //public MeasureLengthDevice(string _unitsToUse, int[] _dataCaptured, int _mostRecentMeasure)
-        //{
-        //    this.unitsToUse = _unitsToUse;
-        //    this.dataCaptured = _dataCaptured;
-        //    this.mostRecentMeasure = _mostRecentMeasure;
-        //}
+        private string unitsToUse;
+        private int[] dataCaptured;
+        private int mostRecentMeasure = 0;
+        private Timer timer;
 
-        public MeasureLengthDevice(string _unitsToUse)
+        Device device = null;
+        //FixedQueue<int> myQueue = null;
+
+        public MeasureLengthDevice()
         {
-            this.unitsToUse = _unitsToUse;
+            device = new Device();
+            mostRecentMeasure = Measurement;
+            unitsToUse = UnitsToUse;
         }
 
         int[] IMeasuringDevice.GetRawData()
@@ -57,16 +52,42 @@ namespace DataCollector
 
         void IMeasuringDevice.StartCollecting()
         {
-            //Implement method to start collecting data
-            //start timer
-            //insert collected data into array
+            //Starts the timer
+            timer = new Timer(Timer_Tick, null, (int)TimeSpan.FromSeconds(1).TotalMilliseconds, (int)TimeSpan.FromSeconds(5).TotalMilliseconds);
+        }
+
+        private async void Timer_Tick(object state)
+        {
+            //Code to randomly generate a new value and update GetMeasurement
+            await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+            () => {
+                mostRecentMeasure = device.GetMeasurement;
+                Debug.WriteLine("Measure Length Device Timer " + mostRecentMeasure);
+
+                //myQueue.Enqueue(data);
+            });
         }
 
         void IMeasuringDevice.StopCollecting()
         {
-            //Implement method to stop collectin data
-            //stop timer
-            //stop adding data into array
+            //Stops the timer
+            timer.Change(Timeout.Infinite, Timeout.Infinite);
         }
+
+        public string History
+        {
+            get { return "Nothing"; }
+        }
+
+        public int Measurement
+        {
+            get { return this.mostRecentMeasure; }
+        }
+
+        public string UnitsToUse
+        {
+            get { return this.unitsToUse; }
+        }
+
     }
 }
