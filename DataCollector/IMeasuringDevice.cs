@@ -13,10 +13,10 @@ namespace DataCollector
         /// </summary>
 
         //This method will return a decimal that represents the metric value of the most recent measurement that was captured.
-        decimal MetricValue();
+        decimal MetricValue(int valueToConvert);
 
         //This method will return a decimal that represents the imperial value of the most recent measurement that was captured.
-        decimal ImperialValue();
+        decimal ImperialValue(int valueToConvert);
 
         //This method will start the device running. It will begin collecting measurements and record them.
         void StartCollecting();

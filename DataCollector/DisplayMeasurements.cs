@@ -10,6 +10,7 @@ namespace DataCollector
     {
         private int measurement;
         private string history;
+        private decimal alternatemeasurement;
 
         public int Measurement
         {
@@ -21,6 +22,12 @@ namespace DataCollector
         {
             get { return this.history; }
             set { this.history = value; }
+        }
+
+        public decimal AlternateMeasurement
+        {
+            get { return this.alternatemeasurement; }
+            set { this.alternatemeasurement = value; }
         }
     }
 }

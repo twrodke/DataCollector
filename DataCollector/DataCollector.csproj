@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="MeasureLengthDevice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheFixedQueue.cs" />
     <Compile Include="UnitsEnumeration.cs" />
   </ItemGroup>
   <ItemGroup>
